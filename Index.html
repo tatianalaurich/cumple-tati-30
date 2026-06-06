@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Los 30 de Tati</title>
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Cormorant Garamond', serif;
+        background: linear-gradient(135deg, #fff1f5, #f8d7df, #fff8ef);
+        color: #5a3b3b;
+        overflow-x: hidden;
+        }
+
+        .hero {
+        min-height: 100vh;
+        padding: 24px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        }
+
+        .invite {
+        width: 100%;
+        max-width: 430px;
+        background: rgba(255, 255, 255, 0.88);
+        border: 2px solid #f4c5d4;
+        border-radius: 34px;
+        padding: 18px;
+        box-shadow: 0 10px 35px rgba(100, 40, 60, 0.22);
+        text-align: center;
+        animation: aparecer 1.2s ease;
+        }
+
+        .photo-wrap {
+        border-radius: 28px;
+        overflow: hidden;
+        border: 2px solid #f3c9d7;
+        background: #fff7fa;
+        margin-bottom: 20px;
+        }
+
+        .photo-wrap img {
+        width: 100%;
+        display: block;
+        height: auto;
+        }
+
+        .bow {
+        font-size: 32px;
+        margin-bottom: 6px;
+        }
+
+        h1 {
+        font-size: 85px;
+        font-family: 'Great Vibes', cursive;
+        color: #b76e79;
+        line-height: 1;
+        }
+
+        .subtitle {
+        font-size: 28px;
+        color: #7b5555;
+        margin-top: 8px;
+        }
+
+        .main-text {
+        font-size: 21px;
+        line-height: 1.5;
+        margin: 18px 0 6px;
+        color: #6a4646;
+        }
+
+        .section {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 15px 18px 35px;
+        text-align: center;
+        }
+
+        .card {
+        background: rgba(255,255,255,0.88);
+        border: 1px solid #f0bfd0;
+        border-radius: 28px;
+        padding: 26px 18px;
+        margin-bottom: 22px;
+        box-shadow: 0 8px 25px rgba(180, 100, 130, 0.18);
+        }
+
+        .card h2 {
+        font-size: 24px;
+        font-weight: normal;
+        color: #8a5a5a;
+        margin-bottom: 10px;
+        }
+
+        .countdown {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 9px;
+        margin-top: 18px;
+        }
+
+        .time-box {
+        background: #fff4f7;
+        border-radius: 18px;
+        padding: 14px 5px;
+        border: 1px solid #f2c4d3;
+        }
+
+        .time-box span {
+        display: block;
+        font-size: 25px;
+        font-weight: bold;
+        color: #b76e79;
+        }
+
+        .time-box small {
+        font-size: 12px;
+        color: #7b5555;
+        }
+
+        .details {
+        font-size: 18px;
+        line-height: 2;
+        }
+
+        .frase {
+        font-size: 17px;
+        line-height: 1.55;
+        margin-bottom: 10px;
+        }
+
+        .btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #b76e79, #d99aaa);
+        color: white;
+        text-decoration: none;
+        padding: 16px 28px;
+        border-radius: 35px;
+        font-size: 18px;
+        margin-top: 15px;
+        box-shadow: 0 8px 20px rgba(160, 80, 100, 0.3);
+        transition: 0.3s;
+        }
+
+        .btn:hover {
+        transform: scale(1.04);
+        }
+
+        .footer {
+        font-size: 15px;
+        color: #8a5a5a;
+        padding-bottom: 30px;
+        }
+
+        .sparkle {
+        position: fixed;
+        color: #d9a441;
+        animation: flotar 6s linear infinite;
+        opacity: 0.75;
+        z-index: 1;
+        pointer-events: none;
+        }
+
+        @keyframes flotar {
+        from {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-10vh) rotate(360deg);
+            opacity: 0;
+        }
+        }
+
+        @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        @media (max-width: 480px) {
+        .hero {
+            min-height: auto;
+            padding: 18px 12px 10px;
+        }
+
+        .invite {
+            padding: 14px;
+            border-radius: 28px;
+        }
+
+        .photo-wrap {
+            border-radius: 24px;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+
+        .main-text {
+            font-size: 17px;
+        }
+
+        .countdown {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        }
+    </style>
+    </head>
+
+    <body>
+
+    <div class="hero">
+        <div class="invite">
+        <div class="photo-wrap">
+            <img src="img/foto-tati-30.png" alt="Tati cumple 30">
+        </div>
+
+        <h1>Tati</h1>
+        <p class="subtitle">Mis 30</p>
+        <div class="bow">🎀</div>
+
+        <p class="main-text">
+            Quiero comenzar esta nueva etapa rodeada de las personas que quiero
+        </p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="card">
+        <h2>Falta poquito para brindar 🥂</h2>
+
+        <div class="countdown">
+            <div class="time-box">
+            <span id="dias">0</span>
+            <small>días</small>
+            </div>
+            <div class="time-box">
+            <span id="horas">0</span>
+            <small>horas</small>
+            </div>
+            <div class="time-box">
+            <span id="minutos">0</span>
+            <small>min</small>
+            </div>
+            <div class="time-box">
+            <span id="segundos">0</span>
+            <small>seg</small>
+            </div>
+        </div>
+        </div>
+
+        <div class="card details">
+        📅 Sábado 13 de junio de 2026 <br>
+        🕕 A partir de las 18 hs <br>
+        📍 Bv. Seguí 120
+        </div>
+
+        <div class="card">
+        <p class="frase">
+            Los mejores momentos se disfrutan más cuando se comparten.
+            Me encantaría que estés ahí para compartir una tarde/noche linda,
+            brindar, reírnos y festejar juntos.
+        </p>
+
+        <a
+            class="btn"
+            href="https://wa.me/5493416232315?text=Hola%20Tati%20%F0%9F%92%95%20Confirmo%20asistencia%20a%20tus%2030.%20Mi%20nombre%20es%3A%20"
+            target="_blank">
+            Confirmar asistencia 💌
+        </a>
+        </div>
+
+        <div class="footer">
+        Con amor, Tati 🎀✨
+        </div>
+    </section>
+
+    <script>
+        const fechaCumple = new Date("2026-06-13T18:00:00-03:00").getTime();
+
+        function actualizarCuenta() {
+        const ahora = new Date().getTime();
+        const distancia = fechaCumple - ahora;
+
+        if (distancia <= 0) {
+            document.getElementById("dias").innerText = "0";
+            document.getElementById("horas").innerText = "0";
+            document.getElementById("minutos").innerText = "0";
+            document.getElementById("segundos").innerText = "0";
+            return;
+        }
+
+        document.getElementById("dias").innerText =
+            Math.floor(distancia / (1000 * 60 * 60 * 24));
+
+        document.getElementById("horas").innerText =
+            Math.floor((distancia / (1000 * 60 * 60)) % 24);
+
+        document.getElementById("minutos").innerText =
+            Math.floor((distancia / (1000 * 60)) % 60);
+
+        document.getElementById("segundos").innerText =
+            Math.floor((distancia / 1000) % 60);
+        }
+
+        setInterval(actualizarCuenta, 1000);
+        actualizarCuenta();
+
+        const simbolos = ["✨", "🎀", "♡", "✦"];
+
+        function crearBrillo() {
+        const sparkle = document.createElement("div");
+        sparkle.className = "sparkle";
+        sparkle.innerText = simbolos[Math.floor(Math.random() * simbolos.length)];
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.fontSize = Math.random() * 12 + 16 + "px";
+        sparkle.style.animationDuration = Math.random() * 3 + 5 + "s";
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => sparkle.remove(), 8000);
+        }
+
+        setInterval(crearBrillo, 900);
+    </script>
+
+</body>
+</html>
